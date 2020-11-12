@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Bookshelf"
+    url: /bookshelf/ 
+  - title: "About"
+    url: /about/ 
+ # - title: "Projects"
+ #   url: /portfolio/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
