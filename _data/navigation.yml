@@ -4,6 +4,8 @@ main:
     url: /bookshelf/ 
   - title: "About"
     url: /about/ 
+  - title: "CV"
+    url: /CV.pdf
  # - title: "Projects"
  #   url: /portfolio/
   # - title: "Sample Collections"
