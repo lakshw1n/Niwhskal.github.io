@@ -4,8 +4,8 @@ main:
     url: /bookshelf/ 
   - title: "About"
     url: /about/ 
-  - title: "CV"
-    url: /CV_Nov2020.pdf
+ # - title: "CV"
+ #   url: /CV_Nov2020.pdf
  # - title: "Projects"
  #   url: /portfolio/
   # - title: "Sample Collections"
