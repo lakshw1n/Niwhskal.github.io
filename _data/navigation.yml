@@ -3,7 +3,7 @@ main:
   - title: "Bookshelf"
     url: /bookshelf/ 
   - title: "Art"
-#   url: /art/
+    url: /art/
   - title: "About"
     url: /about/ 
  # - title: "Projects"
