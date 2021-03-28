@@ -1,13 +1,9 @@
 # main links
 main:
-  - title: "Bookshelf"
-    url: /bookshelf/ 
-  - title: "Art"
-    url: /art/
   - title: "About"
     url: /about/ 
- # - title: "Projects"
- #   url: /portfolio/
+  - title: "Twitter"
+    url: https://twitter.com/niwhskal
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

@@ -16,16 +16,16 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "3Dimensions"
+title                    : ""
 title_separator          : "-"
-subtitle                 : "Platonic | Physical | Mental"
+subtitle                 : ""
 name                     : "Lakshwin Shreesha"
-description              : "Dimentionanigans"
+description              : "Lakshwin Shreesha's Blog"
 url                      : "https://Niwhskal.github.io"
 baseurl                  : "/" 
 repository               : "Niwhskal/Niwhskal.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/88x88.jpg"
+logo                     : "/assets/images/logo_blog.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Lakshwin Shreesha"
-  avatar           : "/assets/images/410x410.jpg"
+  avatar           : ""
   bio              : ""
   location         : "Bangalore, India"
   email            :
