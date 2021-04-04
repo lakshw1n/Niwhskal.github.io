@@ -6,21 +6,6 @@ require "jekyll"
 require "listen"
 require "reduce"
 
-desc "Delete _site/"
-task :delete do
-  puts "\## Deleting _site/"
-  status = system("rm -r _site")
-  puts status ? "Success" : "Failed"
-end
-
-desc "Preview _site/"
-task :preview do
-  puts "\n## Opening _site/ in browser"
-  status = system("open http://0.0.0.0:4000/")
-  puts status ? "Success" : "Failed"
-end
-
-# Courtesy of https://github.com/pacbard/blog/blob/master/_rake/minify.rake
 desc "Minify _site/"
 task :minify do
   puts "\n## Compressing static assets"
@@ -50,40 +35,10 @@ task :recompile_sass do
   puts status ? "Success" : "Failed"
 end
 
-namespace :build do
-  desc "Build _site/ for development"
-  task :dev => :recompile_sass do
-    puts "\n##  Starting Sass and Jekyll"
-    pids = [
-      spawn("sass --watch assets/scss/styles.scss:assets/css/styles.css --sourcemap=none"),
-      spawn("jekyll serve -w")
-    ]
-
-    trap "INT" do
-      Process.kill "INT", *pids
-      exit 1
-    end
-
-    loop do
-      sleep 1
-    end
-  end
-
-  desc "Build _site/ for production"
-  task :pro => :recompile_sass do
-    puts "\n## Compiling Sass"
-    status = system("sass --style compressed assets/scss/styles.scss:assets/css/styles.css --sourcemap=none")
-    puts status ? "Success" : "Failed"
-    puts "\n## Building Jekyll to _site/"
-    status = system("jekyll build")
-    puts status ? "Success" : "Failed"
-    Rake::Task["minify"].invoke
-  end
-end
-
 desc "Commit _site/"
 task :commit do
-  puts "\n## Staging modified files"
+  status = system("git checkout source")
+  puts "\n## In source DIR, Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
@@ -91,7 +46,7 @@ task :commit do
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin source:source")
   puts status ? "Success" : "Failed"
 end
 
@@ -106,11 +61,8 @@ task :deploy do
   puts "\n## Forcing the _site subdirectory to be project root"
   status = system("git filter-branch --subdirectory-filter _site/ -f")
   puts status ? "Success" : "Failed"
-  puts "\n## Switching back to source branch"
-  status = system("git checkout source")
-  puts status ? "Success" : "Failed"
   puts "\n## Pushing all branches to origin"
-  status = system("git push --all origin")
+  status = system("git push origin master:master")
   puts status ? "Success" : "Failed"
 end
 
