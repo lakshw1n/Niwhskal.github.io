@@ -9,9 +9,9 @@
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-future                   : false
+
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "Niwhskal/blackandwhite"
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -20,12 +20,12 @@ title                    : ""
 title_separator          : "-"
 subtitle                 : ""
 name                     : "Lakshwin Shreesha"
-description              : "Lakshwin Shreesha's Blog"
-url                      : "https://Niwhskal.github.io"
+description              : "Lakshwin Shreesha's blog"
+url                      : #"https://Niwhskal.github.io"
 baseurl                  : "/" 
-repository               : "Niwhskal/Niwhskal.github.io"
+repository               : #"Niwhskal/Niwhskal.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/logo_blog.png"
+logo                     : "/assets/images/main_logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -96,7 +96,7 @@ author:
   name             : "Lakshwin Shreesha"
   avatar           : ""
   bio              : ""
-  location         : "Bangalore, India"
+  location         : "BLR, IN"
   email            :
   links:
     - label: "Email"
@@ -224,9 +224,17 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
- 
+  - jekyll-scholar
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
@@ -277,3 +285,8 @@ defaults:
       comments: # true
       share: true
       related: true
+
+scholar:
+  style: assets/bibliography/evilsevier.csl 
+  locale: en
+  source: _bibliography

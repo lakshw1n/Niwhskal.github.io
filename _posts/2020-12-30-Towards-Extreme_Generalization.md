@@ -4,7 +4,6 @@ header:
     image: "assets/images/extremegen.jpg" 
     caption: "Photo credit: [**Viktor Forgacs**](https://unsplash.com/@sonance)"
 show_date: True
-excerpt: ""
 date: "3rd April 2021"
 classes: wide
 author_profile: False

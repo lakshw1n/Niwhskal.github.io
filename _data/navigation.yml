@@ -1,9 +1,11 @@
 # main links
 main:
   - title: "Twitter"
-    url: https://twitter.com/niwhskal
+    url: https://twitter.com/niwhskal 
   - title: "About"
     url: /about/ 
+ # - title: "Projects"
+ #   url: /portfolio/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

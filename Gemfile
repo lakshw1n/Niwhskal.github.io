@@ -1,4 +1,4 @@
 source "https://rubygems.org"
-
-gem "jekyll-include-cache"
-gem "github-pages", group: :jekyll_plugins
+gem 'jekyll-scholar', group: :jekyll_plugins
+gem 'reduce', '~> 0.3.0'
+gemspec
