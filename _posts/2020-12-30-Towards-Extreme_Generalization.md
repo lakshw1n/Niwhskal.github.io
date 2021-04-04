@@ -8,7 +8,7 @@ date: "3rd April 2021"
 classes: wide
 author_profile: False
 ---
-In his 2019 paper {% cite fchol%}, François Chollet provides a definition of Intelligence that serves as a metric for future ML research. He describes intelligence as that which enables wild generalization across tasks, optimized specifically for flexibility and adaptability. 
+In his 2019 paper {% cite fchol%}, François Chollet provided one of the most comprehensive definitions of intelligence. He described intelligence as that which enables wild generalization across tasks, optimized specifically for flexibility and adaptability. 
 
 Unfortunately trends in ML research today are a far cry from his description, leveraging unlimited priors to showcase superior performance at specific tasks, depicting the intelligence of the person involved in creating it rather than that of the algorithm. All of the SOTA in ML research today showcases the crystallized output of intelligence but not the process of intelligence itself.  
 

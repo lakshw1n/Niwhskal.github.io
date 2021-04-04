@@ -58,14 +58,21 @@ task :deploy do
   puts "\n## Creating new master branch and switching to it"
   status = system("git checkout -b master")
   puts status ? "Success" : "Failed"
-  puts "\n## Forcing the _site subdirectory to be project root"
-  status = system("git filter-branch --subdirectory-filter _site/ -f")
+  puts "\n## Removing files"
+  status = system("sudo git rm -r ./")
   puts status ? "Success" : "Failed"
-  puts "\n## Switching back to source branch"
-  status = system("git checkout source")
+  puts "\n## Moving site directory"
+  status = system("sudo cp -r _site/. ./")
   puts status ? "Success" : "Failed"
-  puts "\n## Pushing all branches to origin"
-  status = system("git push --all origin")
+  puts "\n## deleting _site"
+  status = system("sudo rm -r _site/")
+  puts "\n## adding and pushing files to master"
+  status = system("git add -A")
+  puts status ? "Success" : "Failed"
+  message = "Build site at #{Time.now.utc}"
+  status = system("git commit -m \"#{message}\"")
+  puts status ? "Success" : "Failed"
+  status = system("git push origin master:master")
   puts status ? "Success" : "Failed"
 end
 
