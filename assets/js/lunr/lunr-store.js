@@ -4,10 +4,4 @@ var store = [{
         "tags": [],
         "url": "/Towards-Extreme_Generalization/",
         "teaser": null
-      },{
-        "title": "Open-Endedness",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/Open-Endedness/",
-        "teaser": null
       }]
