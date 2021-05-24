@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://niwhskal.github.io/sitemap.xml
